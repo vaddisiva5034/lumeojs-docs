@@ -13,17 +13,21 @@ const Playground = () => {
     <p>Hello, {{ name }}!</p>
     <p l-show="isVisible">This is visible!</p>
     <p title=":message">Hover over me!</p>
+    <button on-click="handleToggle">toggle visible</button>
+    </h1>
     <script>
       // Initialize Lumeo with your state
       Lumeo((state) => {
         state.name = "World";
         state.isVisible = true;
         state.message = "Welcome to LumeoJS!";
+        state.handleToggle=function(){
+          state.isVisible = !state.isVisible;
+        }
       });
     </script>
   </body>
-</html>
-    `);
+</html>`);
 
   const handleEditorChange = (value) => {
     setHtmlCode(value);
