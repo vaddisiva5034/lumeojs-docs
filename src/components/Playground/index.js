@@ -48,6 +48,7 @@ const Playground = () => {
               minimap: { enabled: false },
               automaticLayout: true,
               scrollBeyondLastLine: false,
+              lineNumbers: "off",
             }}
           />
         </div>
